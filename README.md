@@ -51,7 +51,7 @@ Checks if a property exists in any of the objects within the array. Returns ``tr
 ``addData(data)``
 Populates the target element with the provided data. It can handle both array and object-based data:
 
-- For <select> elements, it generates <option> elements.
+- For `<select>` elements, it generates <option> elements.
 - For other elements, it updates the value of the element (comma-separated if multiple values exist).
 - Optionally empties the target element first based on makeEmpty.
 ## **Usage Example**
