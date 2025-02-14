@@ -55,6 +55,21 @@ Populates the target element with the provided data. It can handle both array an
 - For other elements, it updates the value of the element (comma-separated if multiple values exist).
 - Optionally empties the target element first based on makeEmpty.
 ## **Usage Example**
+**Using Data**
+```js 
+let obj = new DynamicFormUpdater('#select1',
+    {
+        element: '#select2',
+        labelText: "username",
+        labelValue: "id",
+        data: [
+            { optionLabel: "A", optionValue: '1' },
+            { optionLabel: "B", optionValue: '2', isSelected: true }
+        ],
+    },
+    'change');
+```
+**Using URL**
 ```js
 $(function () {
     let obj = new Test('#select1', {
