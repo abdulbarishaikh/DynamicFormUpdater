@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Basic Form</h2>
+        <form>
+            <!-- Input Field -->
+            <div class="mb-3">
+                <label for="inputText" class="form-label">Input Field</label>
+                <input type="text" class="form-control" id="inputText" placeholder="Enter text">
+            </div>
+
+            <!-- First Select Dropdown -->
+            <div class="mb-3">
+                <label for="select1" class="form-label">Select Option 1</label>
+                <select class="form-select" id="select1">
+                    <option selected>Choose...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
+
+            <!-- Second Select Dropdown -->
+            <div class="mb-3">
+                <label for="select2" class="form-label">Select Option 2</label>
+                <select class="form-select" id="select2">
+                    <option selected>Choose...</option>
+                    <option value="A">Option A</option>
+                    <option value="B">Option B</option>
+                    <option value="C">Option C</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="DynamicFormUpdater.js"></script>
+    <script>
+
+        $(function () {
+            let obj = new DynamicFormUpdater('#select1',
+                {
+                    element: '#select2',
+                    url: 'https://jsonplaceholder.typicode.com/users',
+                    requestParameters: {
+                        method: "GET"
+                    },
+                    makeEmpty: true,
+                    labelText: "username",
+                    labelValue: "id",
+                    /* data: [
+                        { optionLabel: "A", optionValue: '1' },
+                        { optionLabel: "B", optionValue: '2', isSelected: true }
+                    ], */
+                },
+                'change');
+        });
+    </script>
+</body>
+
+</html>
