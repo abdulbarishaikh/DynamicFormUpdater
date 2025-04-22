@@ -1,6 +1,6 @@
 # **DynamicFormUpdater**
 
-This repository contains a `Test` class built using JavaScript and jQuery. The class is designed to dynamically bind event handlers (like `change`, `input`, `click`, etc.) to specified elements and process responses via AJAX requests. It allows you to dynamically populate select options or other form elements based on external data.
+This repository contains a `DynamicFormUpdater` class built using JavaScript and jQuery. The class is designed to dynamically bind event handlers (like `change`, `input`, `click`, etc.) to specified elements and process responses via AJAX requests. It allows you to dynamically populate select options or other form elements based on external data.
 
 ## **Features**
 
@@ -10,7 +10,7 @@ This repository contains a `Test` class built using JavaScript and jQuery. The c
 - Supports emptying select fields before adding new data.
 - Automatically handles focus for the updated elements.
 
-## **Class: `Test`**
+## **Class: `DynamicFormUpdater`**
 
 ### **Constructor**
 
@@ -72,7 +72,7 @@ let obj = new DynamicFormUpdater('#select1',
 **Using URL**
 ```js
 $(function () {
-    let obj = new Test('#select1', {
+    let obj = new DynamicFormUpdater('#select1', {
         element: '#select2',
         url: 'https://jsonplaceholder.typicode.com/users',
         requestParameters: {
@@ -84,7 +84,7 @@ $(function () {
     }, 'change');
 });
 ```
-In this example, an instance of the `Test` class is created, where:
+In this example, an instance of the `DynamicFormUpdater` class is created, where:
 
 - `#select1` is the triggering element.
 - `#select2` is the target element to be updated.
@@ -93,7 +93,7 @@ In this example, an instance of the `Test` class is created, where:
 - The `labelText` and `labelValue` properties are used to display `username` as the label and `id` as the value in the target select.
 #
 # **Events Supported**
-The `Test` class can bind and respond to the following events:
+The `DynamicFormUpdater` class can bind and respond to the following events:
 
 - `change:` Triggered when the value of an input/select/checkbox changes.
 - `input:` Triggered when the user types into an `<input>` element or changes the value of a `<textarea>`.
@@ -118,7 +118,7 @@ git clone https://github.com/yourusername/your-repository.git
 ```js
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 ```
-- Include the JavaScript file containing the Test class in your project.
+- Include the JavaScript file containing the DynamicFormUpdater class in your project.
 
 #
 
